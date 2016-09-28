@@ -1,7 +1,5 @@
 package com.inprogress.reactnativeyoutube;
 
-import android.app.Activity;
-
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
@@ -15,7 +13,6 @@ import java.util.List;
 
 
 public class ReactNativeYouTube implements ReactPackage {
-
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
