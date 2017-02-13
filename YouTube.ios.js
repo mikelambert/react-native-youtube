@@ -51,6 +51,7 @@ export default class YouTube extends Component {
   };
 
   _root: any;
+
   _exportedProps: any;
 
   constructor(props: any) {
@@ -75,10 +76,10 @@ export default class YouTube extends Component {
     changeEvent = NativeAppEventEmitter.addListener(
       'youtubeVideoChangeState',
       (event) => {
-        if(event.nativeEvent.state == 'ended' && this.props.loop) {
+        if (event.nativeEvent.state === 'ended' && this.props.loop) {
           this.seekTo(0);
         }
-        this.props.onChangeState && this.props.onChangeState(event);
+        return this.props.onChangeState && this.props.onChangeState(event);
       }
     );
     changeQualityEvent = NativeAppEventEmitter.addListener(
