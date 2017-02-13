@@ -63,10 +63,6 @@ export default class YouTube extends Component {
     this._root.setNativeProps(nativeProps);
   }
 
-  _onChangeQuality(event: SyntheticEvent) {
-    return this.props.onChangeQuality && this.props.onChangeQuality(event.nativeEvent);
-  }
-
   stopVideo() {
     NativeModules.YouTubeManager.stopVideo(ReactNative.findNodeHandle(this));
   }
